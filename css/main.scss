@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Open Sans", "Helvetica Neue", sans-serif, Helvetica, Arial;
+$base-font-family: "Open Sans", sans-serif, Helvetica, Arial;
 $base-font-size:   16px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
@@ -12,15 +12,15 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #c88180;
+$text-color:       #56847e;
+$background-color: #183232;
 $brand-color:      #fff;
 $visited-color:      #0f3a49;
 $button-color:      #0f3a49;
-$alert-text:      #0f3a49;
-$alert-background:      #539db7;
+$alert-text:      #003838;
+$alert-background:      #4a9292;
 $button-hover:      #17586f;
-$header-color:     #0f3a49;
+$header-color:     transparent;
 $white:            #fff;
 $videoBackground: linear-gradient(#123845,#3d4d59,#9e7276, #c88180);
 
@@ -45,10 +45,10 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400, 600');
 @font-face {
-    font-family: "BebasNeue";
-    src:    url('/assets/BebasNeue.otf') format('truetype');
+    font-family: "Visitor";
+    src:    url('/assets/visitor1.ttf') format('truetype');
 }
 
 .home{
@@ -95,22 +95,33 @@ $on-laptop:        800px;
     }
 }
 
-.videoContainer{
-    background-image:url('/assets/background.png'), url('/assets/background_plain.png');
-    background-size: 1px 401px, 1px 802px;
-    background-repeat: repeat no-repeat;
-    background-position: center;
+.logoContainer{
     height: 60vh;
-    min-height: 575px;
+    min-height: 768px;
     width: 100%;
     overflow: hidden;
     text-align: center;
     display: flex;
     flex-direction: row;
+    align-items: center;
+
+
+    .titleLogo{
+        display: block;
+        max-width:100%;
+        max-height:100%;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
+    img{
+        max-height: 100%;
+    }
 
     @include media-query($on-palm) {
-        height: 440px;
-        min-height: 440px;
+        height: 256px;
+        min-height: 256px;
     }
 
 
@@ -198,7 +209,7 @@ $on-laptop:        800px;
     }
 
     h1, h2{
-        font-family: "BebasNeue";
+        font-family: "Open Sans";
         font-weight: 400;
         font-size: 1.5em;
 
@@ -231,7 +242,7 @@ $on-laptop:        800px;
 
     #mc_embed_signup{
         color: $button-color;
-        border-radius: 3px;
+        border-radius: 2px;
         box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
 
         .button{
@@ -252,6 +263,10 @@ $on-laptop:        800px;
 }
 
 .alert{
+    h1{
+        font-weight: 600;
+    }
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -260,8 +275,8 @@ $on-laptop:        800px;
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.250);
     padding: 1.5em;
-    border-radius: 5px;
-    font-weight: 600;
+    border-radius: 2px;
+    font-weight: 400;
     font-size: 0.8em;
     max-width: 50vw;
     margin: auto;
@@ -319,7 +334,7 @@ $on-laptop:        800px;
 }
 
 .contact-list{
-    font-family: "BebasNeue";
+    font-family: "Visitor";
     font-size: 1.5em;
     text-decoration: underline;
     font-weight: 400;

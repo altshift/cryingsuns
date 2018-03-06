@@ -1,9 +1,8 @@
 ---
 layout: default
-description: > # this means to ignore newlines until "baseurl:"
-  Not Not mobile game is the ultimate brain-busting challenge based on logic and orientation. Follow the written instructions to swipe your character towards the correct direction (top, bottom, left or right) and victory. As you reach higher levels in the game, increasingly complex and varied instructions will require use of both your logic and dexterity for you to succeed.
-disclaimer: "Alt Shift is not responsible for any of the following consequences triggered by a not not game session:"
-disclaimer-list: ["Mobile damages due to a drop or any other violent contact or hard surfaces, including, but not limited to, tables, walls, floors, ceilings, the bottom of your foot when you stomp on it while screaming in frustration, or friends’ faces.", "Loss of mobile resulting from throwing it, intentionally or not, out of windows, into the ocean, garbage dumps, the fiery pits of hell where you might think it comes from, or at friends’ faces.", "Social isolation, episodes of hysterical crying, and/or nervous breakdowns." ]
+description: "CRYING SUNS is a rogue-lite and tactical game where you explore a dying galaxy as a space fleet commander. As a deep story-driven game experience, each successful run will uncover a part of the underlying truth about the fall of the galactic Empire."
+disclaimer: "FEATURES"
+disclaimer-list: ["Space exploration in a procedural generated universe.", "Tactical fights between BattleShips and their squadrons fleets.", "A deep and dramatic storyline inspired by our favorite S-F universe (Foundation, Dune).", "A mix between pixelart style graphics, 3D and HD special effects.", "Prepare to die very often, it's a roguelite game... And it's a hard one..."]
 developpers: ["Mathias Baglioni", "Julien Cotret", "Vincent Noël"]
 designers: ["Mathias Baglioni"]
 producer: ["Frédéric Lopez"]
@@ -12,38 +11,9 @@ producer: ["Frédéric Lopez"]
 
 <section>
 <div  class="home">
-  <div class="videoContainer">
-    <a href="{{site.ios_url}}" class="store-link hidden-xs">
-      <img src="{{site.baseurl}}/assets/appstore_135x40.svg"/>
-    </a>
-    <div id="iphone">
-      <video id="video" width="240" height="410" autoplay loop>
-        <source src="{{site.baseurl}}/assets/NotNot_1.mp4">
-      </video>
-      <script>
-        var video = document.getElementById('video');
-        video.oncanplay=function(){
-          video.play();
-        }
-        video.addEventListener('click',function(){
-          video.play();
-        },false);
-      </script>
-      <div class="cover">
-      </div>
+    <div class="logoContainer">
+        <img class="titleLogo" src="{{site.baseurl}}/assets/logo_glow.png"/>
     </div>
-    <a href="{{site.android_url}}" class="store-link hidden-xs">
-      <img src="{{site.baseurl}}/assets/google-play-badge.png"/>
-    </a>
-  </div>
-  <div class="stores hidden-lg">
-    <a href="{{site.ios_url}}" class="store-link ">
-      <img src="{{site.baseurl}}/assets/appstore_135x40.svg"/>
-    </a>
-    <a href="{{site.android_url}}" class="store-link">
-      <img src="{{site.baseurl}}/assets/google-play-badge.png"/>
-    </a>
-  </div>
 </div>
 </section>
 <section>
@@ -55,25 +25,24 @@ producer: ["Frédéric Lopez"]
 <section>
 <div  class="description">
   <ul class="contact-list">
-    {% for i in (1..2) %}
+    {% for i in (1..3) %}
       {% assign filename = "/assets/screens/image" | append: i | prepend: site.baseurl %}
       <li><img src="{{filename}}.png"></li>
     {% endfor %}
   </ul>
   <ul class="contact-list">
-    {% for i in (3..4) %}
-      {% assign filename = "/assets/screens/image" | append: i | prepend: site.baseurl %}
-      <li><img src="{{filename}}.png"></li>
+    {% for i in (1..2) %}
+      {% assign filename = "/assets/screens/animation" | append: i | prepend: site.baseurl %}
+      <li><img src="{{filename}}.gif"></li>
     {% endfor %}
   </ul>
 </div>
 </section>
 <section>
     <div class="alert">
-        <img class="alert-icon" title="warning" src="{{site.baseurl}}/assets/warning.svg#warning">
         <div class="text">
             <p>
-                {{page.disclaimer}}
+                <h1>{{page.disclaimer}}</h1>
             </p>
             <ul>
                 {% for item in page.disclaimer-list %}
@@ -87,15 +56,7 @@ producer: ["Frédéric Lopez"]
 <div  class="description less-spaced">
     <div class="recall">
         <img src="{{site.baseurl}}/assets/logo.png"/>
-        <div class="site-title site-baseline">
-            {{site.title}}&nbsp;-&nbsp;{{site.baseline}}
-        </div>
-        <a href="{{site.ios_url}}" class="store-link ">
-            <img src="{{site.baseurl}}/assets/appstore_135x40.svg"/>
-        </a>
-        <a href="{{site.android_url}}" class="store-link ">
-            <img src="{{site.baseurl}}/assets/google-play-badge.png"/>
-        </a>
+
     </div>
 </div>
 </section>
