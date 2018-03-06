@@ -15,11 +15,11 @@ $spacing-unit:     30px;
 $text-color:       #56847e;
 $background-color: #183232;
 $brand-color:      #fff;
-$visited-color:      #0f3a49;
+$visited-color:      #56847e;
 $button-color:      #0f3a49;
 $alert-text:      #003838;
 $alert-background:      #4a9292;
-$button-hover:      #17586f;
+$button-hover:      #56847e;
 $header-color:     transparent;
 $white:            #fff;
 $videoBackground: linear-gradient(#123845,#3d4d59,#9e7276, #c88180);
@@ -47,8 +47,8 @@ $on-laptop:        800px;
 @import "minima";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400, 600');
 @font-face {
-    font-family: "Visitor";
-    src:    url('/assets/visitor1.ttf') format('truetype');
+    font-family: "Bebas";
+    src:    url('/assets/BebasNeue.otf') format('truetype');
 }
 
 .home{
@@ -56,6 +56,16 @@ $on-laptop:        800px;
     flex-direction: column;
     position: relative;
 
+    .description img, .description p{
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        max-width: 256px;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
 
 .stores{
@@ -96,8 +106,8 @@ $on-laptop:        800px;
 }
 
 .logoContainer{
-    height: 60vh;
-    min-height: 768px;
+    height: 50vh;
+    min-height: 640px;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -209,9 +219,9 @@ $on-laptop:        800px;
     }
 
     h1, h2{
-        font-family: "Open Sans";
+        font-family: "Bebas";
         font-weight: 400;
-        font-size: 1.5em;
+        font-size: 2em;
 
         &.center{
             text-align: center;
@@ -225,9 +235,9 @@ $on-laptop:        800px;
         list-style-type: square;
         li{
             margin: 1em;
-            // @include media-query($on-palm) {
-            //     margin: 0;
-            // }
+            @include media-query($on-palm) {
+                margin: 1em 0em;
+            }
         }
     }
 
@@ -272,12 +282,12 @@ $on-laptop:        800px;
     justify-content: center;
     background-color: $alert-background;
     color: $alert-text;
-    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+    //text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.250);
     padding: 1.5em;
     border-radius: 2px;
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 1em;
     max-width: 50vw;
     margin: auto;
 
@@ -298,6 +308,13 @@ $on-laptop:        800px;
             margin-bottom: 32px;
         }
     }
+}
+
+.alert-title{
+    text-align: center;
+    background-color: transparent;
+    padding: 1.5em;
+    color: $text-color;
 }
 
 .footer-col-wrapper{
@@ -334,7 +351,7 @@ $on-laptop:        800px;
 }
 
 .contact-list{
-    font-family: "Visitor";
+    font-family: "Bebas";
     font-size: 1.5em;
     text-decoration: underline;
     font-weight: 400;

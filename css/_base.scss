@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $visited-color;
     text-decoration: none;
 
     &:visited {
@@ -103,10 +103,10 @@ a {
     }
 
     &:hover {
-        color: $header-color;
+        color: $visited-color;
         svg{
             path{
-                fill:$header-color;
+                fill:$visited-color;
             }
         }
     }
