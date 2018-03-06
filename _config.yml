@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Not Not
+title: Crying Suns
 share_title_end: Mobile game for iOS and Android
 baseline: A Brain-Buster
-email: contact@notnot-game.com
+email: idaho@ncryingsuns.com
 altshift_email: contact@altshift.fr
 description: > # this means to ignore newlines until "baseurl:"
   Not Not mobile game is the ultimate brain challenge based on logic and orientation. Follow the written instructions to swipe your character towards the correct direction (top, bottom, left or right). Over the levels, more and more complex and various instructions will require both your logic and dexterity to progress.
@@ -24,7 +24,7 @@ share_description: >
   NotNot puzzle game is the ultimate brain challenge based on logic and orientation. Guide your character following the instructions. Available for iOS & Android
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://altshift.github.io" # the base hostname & protocol for your site
-share_url: "www.notnot-game.com"
+share_url: "www.cryingsuns.com"
 twitter_username: notnot_game
 facebook_username: NotNot-1235889506456864
 facebook_text: Not Not
