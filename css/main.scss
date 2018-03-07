@@ -68,6 +68,11 @@ $on-laptop:        800px;
     }
 }
 
+section.summary{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
 .stores{
     flex-direction: row;
     align-items: stretch;
