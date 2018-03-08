@@ -427,7 +427,7 @@ section.summary{
 
     >*{
         display: block;
-        max-width: 220px;
+        max-width: 260px;
         margin: auto;
         line-height: 1;
     }
@@ -437,11 +437,29 @@ section.summary{
     }
     img{
         max-height: 160px;
+        margin-bottom: 20px;
     }
 
     a{
         text-decoration: underline;
         font-family: "Bebas";
         font-size: 1.5em;
+    }
+
+    p{
+        color: $visited-color;
+    }
+
+    .partners{
+        max-width: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        img{
+            width:35%;
+            margin-bottom: 0px;
+        }
     }
 }
