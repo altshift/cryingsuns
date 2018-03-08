@@ -10,9 +10,17 @@ producer: ["Frédéric Lopez"]
 
 
 <section>
-<div  class="home">
+<div id="home" class="home">
+    <div  class="description small">
+        {% include icon-twitter.html username=site.twitter_username %}
+        <a href="https://altshift.github.io/presskit-website/cryingsuns">PressKit</a>
+        {% include icon-facebook.html username=site.facebook_text id=site.facebook_username %}
+    </div>
     <div class="logoContainer">
         <img class="titleLogo" src="{{site.baseurl}}/assets/logo_glow.png"/>
+    </div>
+    <div  class="description">
+        <a class="calltoaction" href="#newsletter-signup" onclick="setTimeout(function(){$('#mce-EMAIL').focus();}, 400);">Sign up to our newsletter</a>
     </div>
     <div  class="description">
         <p>Soon available on</p>
@@ -62,6 +70,7 @@ producer: ["Frédéric Lopez"]
 <div  class="description less-spaced">
     <div class="recall">
         <img src="{{site.baseurl}}/assets/logo.png"/>
+        <a href="#home" >&#x21E1;&nbsp;GOTO TO TOP&nbsp;&#x21E1;</a>
 
     </div>
 </div>
