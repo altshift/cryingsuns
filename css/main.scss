@@ -73,7 +73,7 @@ $on-laptop:        800px;
         width: 50vw;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         font-weight: 600;
 
         @include media-query($on-palm) {
