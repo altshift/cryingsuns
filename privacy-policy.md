@@ -73,7 +73,7 @@ Place of processing: United States – Privacy Policy – Opt Out.
 This type of service makes it possible to manage a database of email contacts, phone contacts or any other contact information to communicate with the User.
 These services may also collect data concerning the date and time when the message was viewed by the User, as well as when the User interacted with it, such as by clicking on links included in the message.
 
-### MailChimp (The Rocket Science Group, LLC.)
+##### MailChimp (The Rocket Science Group, LLC.)
 MailChimp is an email address management and message sending service provided by The Rocket Science Group, LLC.
 Personal Data collected: email address.
 Place of processing: United States – Privacy Policy. Privacy Shield participant.
