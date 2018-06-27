@@ -163,6 +163,32 @@ section.summary{
         font-size: 1.5em;
     }
 
+    &.kickstarter{
+        background-color: #004751;
+        &:active{
+            margin-top: 0px;
+        }
+        &:hover{
+            color: #00c4e0;
+            text-shadow: 0 0 30px rgba(0, 196, 224, 0.5);
+        }
+    }
+
+    &.steam{
+        background-color: #181a21;
+        img{
+            margin-bottom: 0px;
+        }
+    }
+
+    &.steam, &.kickstarter{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        &:active{
+            margin-bottom: 7px;
+        }
+    }
+
 }
 
 .logoContainer{
