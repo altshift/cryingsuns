@@ -6,28 +6,49 @@ disclaimer-list: ["Space exploration in a procedural generated universe.", "Tact
 developpers: ["Mathias Baglioni", "Julien Cotret", "Vincent Noël"]
 designers: ["Mathias Baglioni"]
 producer: ["Frédéric Lopez"]
+quotes:
+ - text: After playing the demo, I feel this is one to keep an eye on.
+   author: Rock, Paper, Shotgun
+ - text: Just from that demo, I’m really digging it! I love the art, which blends 2D pixel imagery with 3D models, and the more sedate pacing and variety of experiences made me feel very much in command of such a big ship.
+   author: Kotaku
+ - text: It looks excellent, and aims to blend the tight resource management and decision making of FTL with more freeform exploration, putting a bigger emphasis on story than FTL did.
+   author: PC Gamer
 ---
 
-
 <section>
-<div id="home" class="home">
-    <div  class="description small">
-        {% include icon-twitter.html username=site.twitter_username %}
-        <a class="bebas" href="https://altshift.github.io/presskit-website/cryingsuns">PressKit</a>
-        {% include icon-facebook.html username=site.facebook_text id=site.facebook_username %}
-    </div>
-    <div class="logoContainer">
-        <img class="titleLogo" src="{{site.baseurl}}/assets/logo_glow.png"/>
-    </div>
-    <div  class="description">
-        <a class="calltoaction kickstarter" href="https://www.kickstarter.com/projects/106952529/1026774994?ref=522159&token=a2de62f9" >Support US on
-            <img src="{{site.baseurl}}/assets/kickstarter-logo-light.png"/>
-        </a>
-        <a class="calltoaction" href="#newsletter-signup" onclick="setTimeout(function(){$('#mce-EMAIL').focus();}, 400);">Sign up and get the free DEMO!</a>
-    </div>
-    <div  class="description">
-        <p>Add us to your wishlist on Steam</p>
-        <a class="calltoaction steam" href="https://store.steampowered.com/app/873940/Crying_Suns"><img src="{{site.baseurl}}/assets/steam_logo.png"/></a>
+    <div id="home" class="home">
+        <div  class="description small">
+            {% include icon-twitter.html username=site.twitter_username %}
+            <a class="bebas" href="https://altshift.github.io/presskit-website/cryingsuns">PressKit</a>
+            {% include icon-facebook.html username=site.facebook_text id=site.facebook_username %}
+        </div>
+
+        <div id="trailerContainer">
+            <iframe width="960" height="540" class="fit-window-width" src="https://www.youtube.com/embed/An317hx2LQA?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="quotesContainer hidden-xs">
+            {% for i in (0..2) %}
+            <div class="quoteContainer">
+                <p class="quote">{{ page.quotes[i].text }}</p>
+                <p class="author">{{ page.quotes[i].author }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="actionBlock" id="steam-call-to-action">
+            <a class="calltoaction steam" href="https://store.steampowered.com/app/873940/Crying_Suns">Add us to your wishlist on Steam<img src="{{site.baseurl}}/assets/steam_logo.png"/></a>
+            <a class="calltoaction" href="#newsletter-signup" onclick="setTimeout(function(){$('#mce-EMAIL').focus();}, 400);">Sign up and get the free DEMO!</a>
+        </div>
+
+        <div class="quotesContainer hidden-lg">
+                {% for i in (0..2) %}
+                <div class="quoteContainer">
+                    <p class="quote">{{ page.quotes[i].text }}</p>
+                    <p class="author">{{ page.quotes[i].author }}</p>
+                </div>
+                {% endfor %}
+            </div>
     </div>
 </div>
 </section>
@@ -38,7 +59,7 @@ producer: ["Frédéric Lopez"]
     </div>
 </section>
 <section>
-<div  class="description">
+<div class="description">
     <ul class="contact-list">
         {% for i in (2..2) %}
             {% assign filename = "/assets/screens/animation" | append: i | prepend: site.baseurl %}
@@ -60,10 +81,8 @@ producer: ["Frédéric Lopez"]
 </div>
 </section>
 <section>
-        <div  class="description alert-title">
-            <p>
-            <h1>{{page.disclaimer}}</h1>
-            </p>
+    <div  class="description alert-title">
+        <h1>{{page.disclaimer}}</h1>
     </div>
     <div class="alert">
         <div class="text">
@@ -76,11 +95,16 @@ producer: ["Frédéric Lopez"]
     </div>
 </section>
 <section>
+    <div class="actionBlock">
+    	<h1>Pre-order on</h1>
+        <a class="calltoaction backerkit" aria-label="BackerKit - Crowdfunded projects you can trust" href="https://crying-suns.backerkit.com/hosted_preorders">&nbsp;</a>
+        <a class="calltoaction itchio" aria-label="itch.io" href="https://alt-shift.itch.io/crying-suns">&nbsp;</a>
+    </div>
+
 <div  class="description less-spaced">
     <div class="recall">
 
-        <img src="{{site.baseurl}}/assets/logo.png"/>
-        <p>Partners:</p>
+        <h1>Partners</h1>
         <div class="partners alert-title">
             <img src="{{site.baseurl}}/assets/logo_cnc.png"/>
             <img src="{{site.baseurl}}/assets/logo_region.png"/>
