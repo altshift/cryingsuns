@@ -124,6 +124,7 @@ section.summary{
  }
 
 .hidden-xs{
+    display: flex;
     @include media-query($on-palm) {
         display: none;
     }
@@ -149,7 +150,7 @@ section.summary{
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
     text-align: center;
 
-    &:hover{
+	&:hover{
         color: #d14;
         text-shadow: 0 0 30px rgba(221, 17, 68, 0.5);
     }
@@ -159,8 +160,10 @@ section.summary{
         margin-top: 3px;
         margin-bottom: -3px;
     }
+
     @include media-query($on-palm) {
         font-size: 1.5em;
+        border-radius: 0;
     }
 
     &.kickstarter{
@@ -176,6 +179,7 @@ section.summary{
 
     &.steam{
         background-color: #181a21;
+        font-size: 1.8em;
         img{
             margin-bottom: 0px;
         }
@@ -189,11 +193,23 @@ section.summary{
         }
     }
 
+    &.backerkit, &.itchio {
+    	padding: 0;
+    	height: 109px;
+    	background-position: center;
+    }
+
+    &.itchio {
+    	background-image: url('../assets/itchio-banner.png');
+    }
+
+    &.backerkit {
+    	margin-bottom: $spacing-unit;
+    	background-image: url('../assets/backerkit-banner.png');
+    }
 }
 
 .logoContainer{
-    height: 50vh;
-    min-height: 480px;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -219,8 +235,70 @@ section.summary{
         height: 256px;
         min-height: 256px;
     }
+}
 
+#steam-call-to-action {
+	margin: 0 auto;
+}
 
+#trailerContainer {
+	width: 100%;
+	text-align: center;
+
+	background-image: url('../assets/logo_glow_cropped.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+	& iframe {
+		box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.quotesContainer {
+    padding: 20px;
+	margin: 20px 0 0;
+
+    text-align: center;
+
+    background-color:rgba(0, 0, 0, 0.75) ;
+    color: white;
+
+    align-content: center;
+    flex-direction: row;
+
+    box-sizing: border-box;
+
+	.quoteContainer {
+        width: 30vw;
+        margin: auto;
+
+        p.quote {
+            font-size: 0.8em;
+            font-style: italic;
+            text-align: center;
+            @include media-query($on-palm) {
+                margin-bottom: 5px;
+            }
+        }
+
+        p.author {
+            font-family: Bebas;
+            font-size: 1.25em;
+            margin: 0;
+        }
+
+		@include media-query($on-palm) {
+            border-radius: 0;
+            width: 100%;
+            margin-top: 15px;
+		}
+	}
+
+	@include media-query($on-palm) {
+		padding: 10px;
+        width: 100vw;
+        flex-direction: column;
+	}
 }
 
 .logo{
@@ -290,7 +368,7 @@ section.summary{
     }
 }
 
-.description{
+.description, .actionBlock {
     text-align: justify;
     //border-top: 2px dotted;
     font-size: 1em;
@@ -326,9 +404,21 @@ section.summary{
             }
         }
     }
-
-
 }
+
+.actionBlock {
+	max-width: 450px;
+
+    & h1 {
+		text-align: center;
+	}
+
+	@include media-query($on-palm) {
+		width: 100vw;
+		padding: 0;
+	}
+}
+
 .newsletter{
     max-width: 25vw;
 
@@ -361,6 +451,10 @@ section.summary{
 .alert{
     h1{
         font-weight: 600;
+    }
+
+    ul {
+    	margin-bottom: 0;
     }
 
     display: flex;
@@ -400,7 +494,6 @@ section.summary{
     text-align: center;
     background-color: transparent;
     padding: 1.5em;
-    color: $text-color;
 }
 
 .footer-col-wrapper{
@@ -458,7 +551,6 @@ section.summary{
         line-height: 1;
     }
     h1{
-        font-size: 3em;
         max-width: 320px;
     }
     img{
