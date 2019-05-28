@@ -407,16 +407,20 @@ section.summary{
 }
 
 .actionBlock {
-	max-width: 450px;
+	max-width: 520px;
 
     & h1 {
 		text-align: center;
 	}
 
 	@include media-query($on-palm) {
-		width: 100vw;
-		padding: 0;
-	}
+        width: 80vw;
+        padding: 20px;
+        font-size: small;
+    }
+    img{
+        max-width: 202px;
+    }
 }
 
 .newsletter{
@@ -576,7 +580,8 @@ section.summary{
         justify-content: space-around;
 
         img{
-            width:35%;
+            width:25%;
+
             margin-bottom: 0px;
         }
     }
