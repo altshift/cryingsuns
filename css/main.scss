@@ -85,7 +85,9 @@ $on-laptop:        800px;
             width: inherit;
             flex: 1 0 70%;
             a{
-                min-width: 49%;
+                .username{
+                    display: none;
+                }
             }
         }
 
@@ -168,7 +170,6 @@ section.summary{
 
     @include media-query($on-palm) {
         font-size: 1.5em;
-        border-radius: 0;
     }
 
     &.kickstarter{
@@ -214,7 +215,7 @@ section.summary{
         background-image: url('../assets/discord-logo.svg');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 200px;
+        background-size: 40%;
     }
 }
 
