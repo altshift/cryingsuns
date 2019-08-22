@@ -19,9 +19,9 @@ baseline: When FTL meets Foundation
 email: contact@cryingsuns.com
 altshift_email: contact@altshift.fr
 description: > # this means to ignore newlines until "baseurl:"
-  CRYING SUNS is a rogue-lite and tactical game where you explore a dying galaxy as a space fleet commander. As a deep story-driven game experience, each successful run will uncover a part of the underlying truth about the fall of the galactic Empire.
+  CRYING SUNS is a rogue-lite and tactical game where you explore a dying galaxy as a space fleet commander. As a deep story-rich game experience, each successful run will uncover a part of the underlying truth about the fall of the galactic Empire.
 share_description: >
-  CRYING SUNS is a rogue-lite and tactical game where you explore a dying galaxy as a space fleet commander. As a deep story-driven game experience, each successful run will uncover a part of the underlying truth about the fall of the galactic Empire.
+  CRYING SUNS is a rogue-lite and tactical game where you explore a dying galaxy as a space fleet commander. As a deep story-rich game experience, each successful run will uncover a part of the underlying truth about the fall of the galactic Empire.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://altshift.github.io" # the base hostname & protocol for your site
 share_url: "www.cryingsuns.com"
