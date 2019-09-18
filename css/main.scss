@@ -217,6 +217,20 @@ section.summary{
         background-position: center;
         background-size: 40%;
     }
+
+    &.hidden-xs{
+        display: block;
+        @include media-query($on-palm) {
+            display: none;
+        }
+    }
+
+    &.hidden-lg{
+        display: none;
+        @include media-query($on-palm) {
+            display: block;
+        }
+    }
 }
 
 .logoContainer{
@@ -248,7 +262,12 @@ section.summary{
 }
 
 #steam-call-to-action {
-	margin: 0 auto;
+    margin: 0 auto;
+
+    max-width: 100%;
+    @include media-query($on-palm) {
+        max-width: 512px;
+    }
 }
 
 #trailerContainer {
