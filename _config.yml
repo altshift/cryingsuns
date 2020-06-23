@@ -31,7 +31,8 @@ facebook_text: Crying Suns
 github_username:  altshift
 entreprise: Altshift
 commingsoon: COMING SOON
-
+android_url: https://play.google.com/store/apps/details?id=com.altshift.cryingsuns
+ios_url: https://itunes.apple.com/app/id1511788295
 repository: cryningsuns-website/atlshift.github.io
 # Build settings
 markdown: kramdown
