@@ -66,5 +66,63 @@
         "href": "{{site.baseurl}}/privacy-policy.html"
       }
     })});
+
+    var geoipData = {
+        data: null,
+
+        isCalifornia: function() {
+            return (this.data == null) ? false : (this.data.country_code3 == 'USA' && this.data.region == 'California');
+        },
+
+        isEurope: function() {
+            return (this.data == null) ? false : (this.data.continent_code == 'EU');
+        },
+
+        isAfrica: function() {
+            return (this.data == null) ? false : (this.data.continent_code == 'AF');
+        },
+
+        isAmerica: function() {
+            return (this.data == null) ? false : [ 'NA', 'SA' ].includes(this.data.continent_code);
+        },
+
+        isOrendaTerritory: function() {
+            if (this.data == null) {
+                return false;
+            }
+            else {
+                const orendaCountries = [ 'HKG', 'JPN', 'MYS', 'SGP', 'TWN', 'CHN' ];
+                return orendaCountries.includes(this.data.country_code3);
+            }
+        },
+
+        isChina: function() {
+            return (this.data == null) ? false : (this.data.country_code3 == 'CHN');
+        },
+
+        isJapan: function() {
+            return (this.data == null) ? false : (this.data.country_code3 == 'JPN');
+        }
+    };
+    function geoip(json) {
+        geoipData.data = json;
+    }
+
+    function cryingSunsEShop() {
+        const usaURL = 'https://www.nintendo.com/games/detail/crying-suns-switch/';
+        const europeURL = 'https://www.nintendo.co.uk/Games/Nintendo-Switch-download-software/Crying-Suns-1967872.html';
+        const japanURL = 'https://store-jp.nintendo.com/list/software/70010000040697.html';
+
+        var url = usaURL;
+        if (geoipData.isJapan()) {
+            url = japanURL;
+        }
+        else if (geoipData.isEurope()) {
+            url = europeURL;
+        }
+        window.open(url);
+        return false;
+    }
     </script>
+    <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
 </head>
